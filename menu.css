@@ -1,0 +1,399 @@
+/* ==========================================
+   1. VARIABLES GLOBALES Y PALETA CANVA
+=========================================== */
+:root {
+  --bg-primary: #8b0000;
+  --bg-darker: #4a0000;
+  --bg-card: #5c0000;
+  --bg-footer: #2b0000;
+
+  --text-white: #ffffff;
+  --text-muted: #f3e5f5;
+
+  --accent-gold: #d4af37;
+  --accent-yellow: #ffd700;
+
+  --font-heading: 'Bebas Neue', cursive, sans-serif;
+  --font-body: 'Poppins', sans-serif;
+
+  --max-width: 1200px;
+  --border-radius: 12px;
+  --transition: all 0.25s ease-in-out;
+  --box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+   2. RESET BASE
+=========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-white);
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ==========================================
+   3. HEADER & HERO DEL MENÚ
+=========================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(74, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--accent-gold);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--text-white);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--accent-yellow);
+}
+
+.btn-outline {
+  border: 2px solid var(--accent-yellow);
+  color: var(--accent-yellow);
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background-color: var(--accent-yellow);
+  color: #000;
+}
+
+.menu-hero {
+  padding-top: 130px;
+  padding-bottom: 3rem;
+  text-align: center;
+  background-color: var(--bg-darker);
+  border-bottom: 2px solid var(--accent-gold);
+}
+
+.badge {
+  color: var(--accent-yellow);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+}
+
+.page-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--text-white);
+  line-height: 1;
+  margin: 0.5rem 0;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* ==========================================
+   4. ESTILOS DE LA CARTA Y SECCIONES
+=========================================== */
+.menu-container {
+  padding: 4rem 0 6rem 0;
+}
+
+.menu-section {
+  background-color: var(--bg-darker);
+  border: 2px solid var(--accent-gold);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--box-shadow);
+}
+
+.section-title-wrapper {
+  margin-bottom: 2rem;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.4);
+  padding-bottom: 1rem;
+}
+
+.category-title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--accent-yellow);
+  letter-spacing: 1px;
+}
+
+.category-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.builder-step {
+  margin-bottom: 2.5rem;
+}
+
+.step-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--text-white);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.step-tag {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--accent-yellow);
+  font-weight: 600;
+}
+
+.step-tag.free {
+  color: #25D366;
+}
+
+/* ==========================================
+   5. CAJAS SELECCIONABLES (CARDS INTERACTIVAS)
+=========================================== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+/* Ocultar los inputs nativos de radio/checkbox */
+.select-card input[type="radio"],
+.select-card input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Estilo base de las tarjetas seleccionables */
+.select-card {
+  display: block;
+  position: relative;
+  background-color: var(--bg-card);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: var(--border-radius);
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.select-card:hover {
+  border-color: var(--accent-yellow);
+  transform: translateY(-3px);
+  background-color: rgba(255, 215, 0, 0.08);
+}
+
+/* Estado SELECCIONADO (Checked) */
+.select-card:has(input:checked) {
+  border-color: var(--accent-yellow);
+  background-color: var(--accent-yellow);
+  color: #000000;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.select-card:has(input:checked) .item-desc,
+.select-card:has(input:checked) .item-price,
+.select-card:has(input:checked) .item-name {
+  color: #000000;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.item-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-white);
+}
+
+.item-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.item-price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent-yellow);
+  margin-top: 0.3rem;
+}
+
+/* Modificador tarjetas pequeñas (Mini / Toppings / Salsas / Bebidas) */
+.select-card.mini {
+  padding: 0.9rem 1.2rem;
+}
+
+.select-card.mini .card-content {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Modificador Hamburguesas */
+.burguer-card .card-header-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ==========================================
+   8. BARRA FLOTANTE DEL PEDIDO Y BOTÓN PEDIR
+=========================================== */
+.cart-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #210000;
+  border-top: 3px solid var(--accent-yellow);
+  padding: 1rem 0;
+  z-index: 2000;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.cart-bar.hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cart-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 65%;
+}
+
+.cart-title {
+  font-weight: 700;
+  color: var(--accent-yellow);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.cart-summary {
+  font-size: 0.95rem;
+  color: var(--text-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.cart-total {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--accent-yellow);
+  letter-spacing: 1px;
+}
+
+.btn-whatsapp-order {
+  background-color: #25D366;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.btn-whatsapp-order:hover {
+  background-color: #1ebc57;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .cart-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .cart-details {
+    max-width: 100%;
+  }
+
+  .btn-whatsapp-order {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   6. FOOTER
+=========================================== */
+.footer {
+  padding: 2.5rem 0;
+  background-color: var(--bg-footer);
+  border-top: 2px solid var(--accent-gold);
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* ==========================================
+   7. ADAPTACIÓN MÓVIL
+=========================================== */
+@media (max-width: 600px) {
+  .menu-section {
+    padding: 1.2rem;
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,183 @@
+¿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Urban Bites - Las mejores salchipapas y hamburguesas artesanales. ¡Arma tu pedido online!">
+  <title>Urban Bites | Comida Rápida Artesanal</title>
+
+  <!-- Google Fonts: Bebas Neue (Títulos) y Poppins (Cuerpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN para los íconos oficiales de redes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Hoja de Estilos CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       SECCIÓN 1: HEADER
+       - Únicamente Logo a la izquierda y Botón "MENÚ" a la derecha (Sin links de navegación)
+  =========================================== -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      
+      <!-- Logo del Negocio -->
+      <a href="index.html" class="logo">
+        URBAN <span>BITES</span>
+      </a>
+
+      <!-- Botón directo al Menú Interactivo -->
+      <div class="nav-actions">
+        <a href="menu.html" class="btn btn-primary">MENÚ </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================
+       SECCIÓN 2: HERO BANNER CON CARRUSEL (4 SEGUNDOS)
+       - Rotación de imágenes locales (comida1.png a comida4.png)
+  =========================================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-slider">
+      <div class="slide active" style="background-image: url('img/comida1.png');"></div>
+      <div class="slide" style="background-image: url('img/comida2.png');"></div>
+      <div class="slide" style="background-image: url('img/comida3.png');"></div>
+      <div class="slide" style="background-image: url('img/comida4.png');"></div>
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge"> COMIDA RÁPIDA ARTESANAL</span>
+        <h1 class="hero-title">¡ARMA TU SALCHIPAPA O ESCOGE TU HAMBURGUESA!</h1>
+        <p class="hero-description">
+          Ingredientes premium, porciones generosas y el sabor urbano que te encanta. Personaliza tu pedido online en segundos y envíalo por WhatsApp.
+        </p>
+        <div class="hero-buttons">
+          <a href="menu.html" class="btn btn-primary">VER MENÚ Y PEDIR AHORA 📲</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECCIÓN 3: ESPECIALIDADES (GALERÍA GRID)
+       - Mosaico con tus 4 fotos de comida
+  =========================================== -->
+  <section class="gallery" id="especialidades">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">LO MÁS SOLICITADO</span>
+        <h2 class="section-title">NUESTRAS ESPECIALIDADES</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="img/comida1.png" alt="Salchipapa Especial" loading="lazy">
+          <div class="gallery-info">
+            <h3>Salchipapas Especiales XL</h3>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="img/comida2.png" alt="Hamburguesa Doble" loading="lazy">
+          <div class="gallery-info">
+            <h3>Pizza doble queso</h3>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="img/comida3.png" alt="Papas Cargadas" loading="lazy">
+          <div class="gallery-info">
+            <h3>Coctel especial
+            </h3>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="img/comida4.png" alt="Monster Burger" loading="lazy">
+          <div class="gallery-info">
+            <h3>Monster Burger Artesanal</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECCIÓN 4: UBICACIÓN Y HORARIOS
+       - Izquierda: Dirección y Horarios
+       - Derecha: Mapa de Google Maps
+  =========================================== -->
+  <section class="location" id="ubicacion">
+    <div class="container location-container">
+      
+      <!-- Izquierda: Dirección y Horarios -->
+      <div class="location-info">
+        <span class="badge">VISÍTANOS O PIDE A DOMICILIO</span>
+        <h2 class="section-title">UBICACIÓN Y HORARIOS</h2>
+        
+        <div class="info-block">
+          <h3>📍 Dirección</h3>
+          <p>Calle Principal #45 - 12, Zona Gastronómica</p>
+        </div>
+
+        <div class="info-block">
+          <h3>🕒 Horarios de Atención</h3>
+          <ul class="hours-list">
+            <li>Lunes a Jueves: <span>5:00 PM - 11:00 PM</span></li>
+            <li>Viernes a Domingo: <span>4:00 PM - 1:00 AM</span></li>
+          </ul>
+        </div>
+
+        <a href="menu.html" class="btn btn-primary location-cta">IR AL MENÚ INTERACTIVO 📲</a>
+      </div>
+
+      <!-- Derecha: Mapa Interactivo -->
+      <div class="location-map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.53634125828!2d-76.303123!3d3.898852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwNTMnNTUuOSJOIDc2wrAxOCcxMS4yIlc!5e0!3m2!1ses!2sco!4v1620000000000!5m2!1ses!2sco" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECCIÓN 5: FOOTER CON REDES SOCIALES
+  =========================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <a href="index.html" class="logo">URBAN <span>BITES</span></a>
+      <p> 2026 Urban Bites. Todos los derechos reservados.</p>
+      
+      <!-- Logos de redes sociales oficiales -->
+      <div class="footer-socials">
+        <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-icon tiktok" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menú Interactivo - Urban Bites. Arma tu pedido online.">
+  <title>Menú Interactivo | Urban Bites</title>
+
+  <!-- Google Fonts: Bebas Neue y Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        URBAN <span>BITES</span>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-outline"> INICIO</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNER PRINCIPAL DEL MENÚ -->
+  <section class="menu-hero">
+    <div class="container">
+      <span class="badge"> ELIGE, PERSONALIZA Y DISFRUTA</span>
+      <h1 class="page-title">NUESTRO MENÚ INTERACTIVO</h1>
+      <p class="page-subtitle">Selecciona tus productos favoritos y arma tu salchipapa a tu gusto</p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO DEL MENÚ -->
+  <main class="menu-container container">
+
+    <!-- SECCIÓN 1: SALCHIPAPAS (ARMA LA TUYA) -->
+    <section class="menu-section" id="salchipapas">
+      <div class="section-title-wrapper">
+        <h2 class="category-title">1. ARMA TU SALCHIPAPA </h2>
+        <p class="category-desc">Elige tu base, selecciona tus toppings y añade las salsas que quieras.</p>
+      </div>
+
+      <!-- PASO A: BASES -->
+      <div class="builder-step">
+        <h3 class="step-title">Paso A: Selecciona tu Base</h3>
+        <div class="cards-grid radio-group">
+          
+          <label class="select-card">
+            <input type="radio" name="base-salchipapa" value="Personal" data-price="12000">
+            <div class="card-content">
+              <span class="item-name">Personal</span>
+              <p class="item-desc">Papas fritas crujientes y salchicha especial.</p>
+              <span class="item-price">$12.000</span>
+            </div>
+          </label>
+
+          <label class="select-card">
+            <input type="radio" name="base-salchipapa" value="Grupito" data-price="22000">
+            <div class="card-content">
+              <span class="item-name">Grupito</span>
+              <p class="item-desc">Papas fritas, papas criollas doradas y doble salchicha.</p>
+              <span class="item-price">$22.000</span>
+            </div>
+          </label>
+
+          <label class="select-card">
+            <input type="radio" name="base-salchipapa" value="Max" data-price="34000">
+            <div class="card-content">
+              <span class="item-name">Max</span>
+              <p class="item-desc">Papas fritas, papas criollas, salchicha y chorizo artesanal.</p>
+              <span class="item-price">$34.000</span>
+            </div>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- PASO B: TOPPINGS -->
+      <div class="builder-step">
+        <h3 class="step-title">Paso B: Agrega Toppings <span class="step-tag">(+$3.000 c/u)</span></h3>
+        <div class="cards-grid checkbox-group">
+
+          <label class="select-card">
+            <input type="checkbox" name="topping" value="Queso" data-price="3000">
+            <div class="card-content">
+              <span class="item-name">Queso Extra</span>
+              <span class="item-price">+$3.000</span>
+            </div>
+          </label>
+
+          <label class="select-card">
+            <input type="checkbox" name="topping" value="Maicitos" data-price="3000">
+            <div class="card-content">
+              <span class="item-name">Maicitos Sweet</span>
+              <span class="item-price">+$3.000</span>
+            </div>
+          </label>
+
+          <label class="select-card">
+            <input type="checkbox" name="topping" value="Tocineta" data-price="3000">
+            <div class="card-content">
+              <span class="item-name"> Tocineta Crujiente</span>
+              <span class="item-price">+$3.000</span>
+            </div>
+          </label>
+
+          <label class="select-card">
+            <input type="checkbox" name="topping" value="Costillas" data-price="3000">
+            <div class="card-content">
+              <span class="item-name"> Costillas BBQ</span>
+              <span class="item-price">+$3.000</span>
+            </div>
+          </label>
+
+          <label class="select-card">
+            <input type="checkbox" name="topping" value="Pollo Desmechado" data-price="3000">
+            <div class="card-content">
+              <span class="item-name"> Pollo Desmechado</span>
+              <span class="item-price">+$3.000</span>
+            </div>
+          </label>
+
+          <label class="select-card">
+            <input type="checkbox" name="topping" value="Carne Desmechada" data-price="3000">
+            <div class="card-content">
+              <span class="item-name">Carne Desmechada</span>
+              <span class="item-price">+$3.000</span>
+            </div>
+          </label>
+
+        </div>
+      </div>
+
+      <!-- PASO C: SALSAS -->
+      <div class="builder-step">
+        <h3 class="step-title">Paso C: Elige tus Salsas <span class="step-tag free">(Sin recargo)</span></h3>
+        <div class="cards-grid checkbox-group">
+
+          <label class="select-card mini">
+            <input type="checkbox" name="salsa" value="Piña">
+            <div class="card-content">
+              <span class="item-name">Piña</span>
+            </div>
+          </label>
+
+          <label class="select-card mini">
+            <input type="checkbox" name="salsa" value="Salsa Verde">
+            <div class="card-content">
+              <span class="item-name"> Salsa Verde</span>
+            </div>
+          </label>
+
+          <label class="select-card mini">
+            <input type="checkbox" name="salsa" value="Salsa de Ajo">
+            <div class="card-content">
+              <span class="item-name"> Salsa de Ajo</span>
+            </div>
+          </label>
+
+          <label class="select-card mini">
+            <input type="checkbox" name="salsa" value="BBQ">
+            <div class="card-content">
+              <span class="item-name"> BBQ</span>
+            </div>
+          </label>
+
+          <label class="select-card mini">
+            <input type="checkbox" name="salsa" value="Rosada">
+            <div class="card-content">
+              <span class="item-name">Rosada</span>
+            </div>
+          </label>
+
+          <label class="select-card mini">
+            <input type="checkbox" name="salsa" value="Tomate">
+            <div class="card-content">
+              <span class="item-name"> Tomate</span>
+            </div>
+          </label>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: HAMBURGUESAS -->
+    <section class="menu-section" id="hamburguesas">
+      <div class="section-title-wrapper">
+        <h2 class="category-title">2. HAMBURGUESAS ARTESANALES </h2>
+        <p class="category-desc">Carne 100% artesanal, pan brioche sellado con mantequilla.</p>
+      </div>
+
+      <div class="cards-grid checkbox-group">
+
+        <label class="select-card burguer-card">
+          <input type="checkbox" name="hamburguesa" value="Criolla" data-price="18000">
+          <div class="card-content">
+            <div class="card-header-item">
+              <span class="item-name">Hamburguesa Criolla</span>
+              <span class="item-price">$18.000</span>
+            </div>
+            <p class="item-desc">Carne de res 150g, huevo frito, plátano maduro, queso costeño y ripio de papa.</p>
+          </div>
+        </label>
+
+        <label class="select-card burguer-card">
+          <input type="checkbox" name="hamburguesa" value="Doble Queso" data-price="20000">
+          <div class="card-content">
+            <div class="card-header-item">
+              <span class="item-name">Doble Queso</span>
+              <span class="item-price">$20.000</span>
+            </div>
+            <p class="item-desc">Doble carne de 120g, quíntuple capa de cheddar fundido y tocineta ahumada.</p>
+          </div>
+        </label>
+
+        <label class="select-card burguer-card">
+          <input type="checkbox" name="hamburguesa" value="Mega Burger" data-price="25000">
+          <div class="card-content">
+            <div class="card-header-item">
+              <span class="item-name">Mega Burger</span>
+              <span class="item-price">$25.000</span>
+            </div>
+            <p class="item-desc">Carne de res 200g, pollo desmechado, tocineta, queso mozzarella, aros de cebolla y BBQ.</p>
+          </div>
+        </label>
+
+        <label class="select-card burguer-card">
+          <input type="checkbox" name="hamburguesa" value="Monster Burger Artesanal" data-price="32000">
+          <div class="card-content">
+            <div class="card-header-item">
+              <span class="item-name">Monster Burger Artesanal</span>
+              <span class="item-price">$32.000</span>
+            </div>
+            <p class="item-desc">Triple carne de res, triple tocineta, pepinillos, queso americano, maicitos y baño de queso dip.</p>
+          </div>
+        </label>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: BEBIDAS -->
+    <section class="menu-section" id="bebidas">
+      <div class="section-title-wrapper">
+        <h2 class="category-title">3. BEBIDAS REFRESCANTES </h2>
+        <p class="category-desc">Acompaña tu comida con la mejor selección helada.</p>
+      </div>
+
+      <div class="cards-grid checkbox-group">
+
+        <label class="select-card mini">
+          <input type="checkbox" name="bebida" value="Gaseosa 400ml" data-price="5000">
+          <div class="card-content">
+            <span class="item-name"> Gaseosa Personal (400ml)</span>
+            <span class="item-price">$5.000</span>
+          </div>
+        </label>
+
+        <label class="select-card mini">
+          <input type="checkbox" name="bebida" value="Limonada Natural" data-price="7000">
+          <div class="card-content">
+            <span class="item-name"> Limonada Natural</span>
+            <span class="item-price">$7.000</span>
+          </div>
+        </label>
+
+        <label class="select-card mini">
+          <input type="checkbox" name="bebida" value="Limonada de Cerezada" data-price="9000">
+          <div class="card-content">
+            <span class="item-name"> Limonada Cerezada</span>
+            <span class="item-price">$9.000</span>
+          </div>
+        </label>
+
+        <label class="select-card mini">
+          <input type="checkbox" name="bebida" value="Cerveza Club Colombia" data-price="8000">
+          <div class="card-content">
+            <span class="item-name"> Cerveza Club Colombia</span>
+            <span class="item-price">$8.000</span>
+          </div>
+        </label>
+
+        <label class="select-card mini">
+          <input type="checkbox" name="bebida" value="Agua Mineral" data-price="4000">
+          <div class="card-content">
+            <span class="item-name"> Agua Mineral Sin Gas</span>
+            <span class="item-price">$4.000</span>
+          </div>
+        </label>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- VENTANA / BARRA FLOTANTE DEL PEDIDO -->
+  <div id="cart-bar" class="cart-bar hidden">
+    <div class="container cart-container">
+      <div class="cart-details">
+        <span class="cart-title">🛒 Tu Pedido:</span>
+        <p id="cart-summary" class="cart-summary">Selecciona un ítem...</p>
+        <span id="cart-total" class="cart-total">$0</span>
+      </div>
+      <button id="btn-pedir" class="btn btn-whatsapp-order">
+        <i class="fa-brands fa-whatsapp"></i> PEDIR AHORA
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <a href="index.html" class="logo">URBAN <span>BITES</span></a>
+      <p> 2026 Urban Bites. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="menu.js"></script>
+
+</body>
+</html>
